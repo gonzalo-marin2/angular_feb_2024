@@ -1,0 +1,35 @@
+<div>
+  <label>Producto:</label>
+  <input [(ngModel)]="pedido.producto" type="text"><br><br>
+  <label>Precio:</label>
+  <input [(ngModel)]="pedido.precio" type="number"><br><br>
+  <label>Unidades:</label>
+  <input [(ngModel)]="pedido.unidades" type="number"><br><br>
+  <input type="button" (click)="grabarPedido()" value="Grabar pedido" id="btnGrabar">
+  <br><br><br>
+  <input type="button" (click)="verPedidos()" value="Ver pedidos" id="btnVer">
+  <br><br><br>
+
+  <div>
+
+   <table *ngIf="tablaVisible"><!--preguntamos si tablaVisible es true-->
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Unidades</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of pedidos">
+          <td>{{ p.producto }}</td>
+          <td>{{ p.precio }}</td>
+          <td>{{ p.unidades }}</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+</div>
