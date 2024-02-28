@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Continentes</h1>
+  <select (change)="cargaPaisesContinente()" [(ngModel)]="continenteSel">
+    <option *ngFor="let c of continentes" value="{{c}}">{{c}}</option>
+  </select>
+  <br>
+  <br>
+  <div *ngIf="paises&&paises.length>0"><!--Ponemos un ngIf para que si la lista de países está vacía, no se vea la tabla-->
+    <h1>Países</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>País</th>
+          <th>Capital</th>
+          <th>Población</th>
+          <th>Bandera</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of paises">
+          <td><strong>{{ p.nombre }}</strong></td>
+          <td><em>{{ p.capital }}</em></td>
+          <td>{{ p.poblacion }}</td>
+          <td align='center'><img src="{{ p.bandera }}" alt='Bandera' width='32' height='16'></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</div>
