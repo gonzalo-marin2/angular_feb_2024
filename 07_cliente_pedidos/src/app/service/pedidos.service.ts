@@ -7,7 +7,7 @@ import { Pedido } from '../model/Pedido';
   providedIn: 'root'
 })
 export class PedidosService {
-  urlBase:string="http://localhost:9000/";
+  urlBase:string="http://localhost:7000/spedidos/";
   constructor(private http:HttpClient) { }
 
   alta(pedido:Pedido):Observable<void>{
