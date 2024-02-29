@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Continentes</h1>
   <select (change)="cargaPaisesContinente()" [(ngModel)]="continenteSel">
+    <option disabled selected value="">Seleccione un continente</option>
     <option *ngFor="let c of continentes" value="{{c}}">{{c}}</option>
   </select>
   <br>
