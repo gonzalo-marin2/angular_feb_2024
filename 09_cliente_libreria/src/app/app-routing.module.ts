@@ -6,11 +6,11 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
 
 const routes: Routes = [
   {
-    path:"catalogo",
+    path:"libros",
     component:CatalogoComponent
     },
     {
-      path:"buscar",
+      path:"isbn",
       component:BuscarComponent
     },
     {

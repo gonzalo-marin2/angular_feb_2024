@@ -1,8 +1,8 @@
 <div class="container">
-  <label>ISBN</label><input type="text" [(ngModel)]="this.isbn"><br>
+  <label>ISBN</label><input type="text" [(ngModel)]="isbn"><br>
   <button (click)="buscarLibro()">Buscar</button><br>
-  <div class="libro">
-    <h4>Temática: {{libro.tematica}}</h4><br>
-    <h4>Título: {{libro.titulo}}</h4>
+  <div *ngIf="libro!=null">
+    <h4>Temática: {{libro.tematica}} </h4><br>
+    <h4>Título: {{libro.titulo}} </h4>
   </div>
 </div>
