@@ -1,0 +1,12 @@
+<div class="container">
+  <label>Temática:</label>
+  <select [(ngModel)]="libro.tematica">
+    <option disabled selected value="">Seleccione una temática</option>
+    <option *ngFor="let t of tematicas" value="{{t}}">{{t}}</option>
+  </select><br>
+  <label>Titulo:</label>
+  <input [(ngModel)]="libro.titulo" type="text"><br>
+  <label>ISBN</label>
+  <input [(ngModel)]="libro.isbn" type="number"><br>
+  <input type="button" (click)="alta()" value="Grabar" id="btnGrabar">
+</div>
