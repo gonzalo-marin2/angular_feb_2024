@@ -10,4 +10,6 @@ export class LoginComponent {
   cliente:Cliente;
   clientes:Cliente[];
 
+  constructor(){}
+
 }
