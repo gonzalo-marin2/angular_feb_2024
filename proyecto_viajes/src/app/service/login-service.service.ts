@@ -15,6 +15,6 @@ export class LoginServiceService {
     let params=new HttpParams();
     params=params.set("usuario",usuario);
     params=params.set("password",password);
-    return this.http.get<Cliente>(url,{params:params}+"reserva");
+    return this.http.get<Cliente>(url,{params:params});
   }
 }
