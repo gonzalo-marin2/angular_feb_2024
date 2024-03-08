@@ -1,0 +1,12 @@
+nav ul {
+  list-style-type: none;
+}
+nav li {
+  display: inline; /* Ítems del menú en una línea horizontal */
+  padding:10px;
+}
+.disabled{
+  cursor:not-allowed;
+  pointer-events:none;
+  color: gray;
+}

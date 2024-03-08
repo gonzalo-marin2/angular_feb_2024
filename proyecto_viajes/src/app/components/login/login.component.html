@@ -1,0 +1,20 @@
+<div class="container">
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a routerLink="/login">Acceso</a></li>
+        <li><a class="disabled" routerLink="/registro">Registrar</a></li>
+        <li><a class="disabled" routerLink="/mis_reservas">Mis reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="autenticar">
+    <h3>Autenticación</h3>
+    <label>Usuario:</label><input [(ngModel)]="cliente.usuario" type="text"><br>
+    <label>Password:</label><input [(ngModel)]="cliente.password" type="text"><br>
+    <input type="button" (click)="entrar()" value="Entrar">
+    <a href="">Regístrese</a>
+  </div>
+
+</div>
